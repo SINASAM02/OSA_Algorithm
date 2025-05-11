@@ -11,6 +11,9 @@ costfunction = @(x)     sphere(x); % Cost Function
 npop = 50;  % Number Of Papulatin 
 maxiteration = 1000; % Maximum Of Iteration 
 alpha = rand() * 0.5;
+% Optimized value For Alpha
+    % alpha = rand() * 0.2; 
+    % alpha = 0;
 beta = 1.9 ;
 %% Initialization Step
 empty_owl.position = [];
@@ -83,6 +86,5 @@ semilogy(bestcost,'r','LineWidth',2);
 xlabel('Iteration');
 ylabel('Cost');
 title('Sphere(x)');
-
 disp(['Position Of Best Solution:' num2str(bestsol.position)]);
 disp(['Cost Of Best Solution:' num2str(bestsol.cost)]);
