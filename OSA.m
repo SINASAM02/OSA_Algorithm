@@ -1,3 +1,11 @@
+%% Owl Search Algorithm (OSA) in MATLAB
+% Developed by: Ali Sam Daliri
+% Email: alisamdaliri@outlook.com
+% GitHub: https://github.com/SINASAM02
+% 
+% Date: 2025/11/05
+%
+% For academic use, feel free to cite or modify;)
 %% Program Start
 clc;
 clear;
