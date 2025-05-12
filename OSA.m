@@ -17,11 +17,7 @@ varmax = +10; % Upper Bond Of Decision varible
 costfunction = @(x)     sphere(x); % Cost Function 
 %% OSA Parameters
 npop = 50;  % Number Of Papulatin 
-maxiteration = 1000; % Maximum Of Iteration 
-alpha = rand() * 0.5;
-% Optimized value For Alpha
-    % alpha = rand() * 0.2; 
-    % alpha = 0;
+maxiteration = 1000; % Maximum Of Iteration 
 beta = 1.9 ;
 %% Initialization Step
 empty_owl.position = [];
@@ -46,6 +42,10 @@ end
 bestcost = zeros(maxiteration,1);
 for iter = 1:maxiteration
     pvm = rand();
+    alpha = rand() * 0.5; % Defined Value For Alpha
+    % Optimized value For Alpha
+    % alpha = rand() * 0.2; 
+    % alpha = 0;
     beta = 1.9 - 1.9 * ((iter) / maxiteration);
     % Select Best Owl
     bestowl = bestsol;
