@@ -42,10 +42,6 @@ end
 bestcost = zeros(maxiteration,1);
 for iter = 1:maxiteration
     pvm = rand();
-    alpha = rand() * 0.5; % Defined Value For Alpha
-    % Optimized value For Alpha
-    % alpha = rand() * 0.2; 
-    % alpha = 0;
     beta = 1.9 - 1.9 * ((iter) / maxiteration);
     % Select Best Owl
     bestowl = bestsol;
@@ -53,6 +49,10 @@ for iter = 1:maxiteration
     weakowl = weaksol;
     % OWL Phase
     for i = 1:npop
+        alpha = rand() * 0.5; % Defined Value For Alpha
+        % Optimized value For Alpha
+        % alpha = rand() * 0.2; 
+        % alpha = 0;
         % Nomalized Intensity Calculation
         owl(i).intensity = (owl(i).cost - bestowl.cost)/(weakowl.cost - bestowl.cost);
         % Distance Calculation
